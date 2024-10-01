@@ -61,7 +61,7 @@ flutter:
     - assets/google-symbol.png
     - assets/qibla.png
     - assets/read-quran.png
-    - assets/hadith.png
+    - assets/hadis.png
     - assets/kaabah.png
 
   # To add assets to your application, add an assets section, like this:

@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:test2/homePage.dart';
+import 'package:test2/home_page.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: LoginScreen(),
     );
@@ -16,19 +18,21 @@ class MyApp extends StatelessWidget {
 }
 
 class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
         child: SingleChildScrollView(
-          padding: EdgeInsets.symmetric(horizontal: 32),
+          padding: const EdgeInsets.symmetric(horizontal: 32),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              SizedBox(height: 60),
+              const SizedBox(height: 60),
               // Heading
-              Text(
+              const Text(
                 'Log Masuk',
                 textAlign: TextAlign.center,
                 style: TextStyle(
@@ -37,72 +41,77 @@ class LoginScreen extends StatelessWidget {
                   color: Color(0xFF6B2572), // Purple color
                 ),
               ),
-              SizedBox(height: 40),
+              const SizedBox(height: 40),
+
               // Username/Email TextField
               TextField(
                 decoration: InputDecoration(
                   labelText: 'Nama Pengguna / Emel',
-                  prefixIcon: Icon(Icons.person_outline),
+                  prefixIcon: const Icon(Icons.person_outline),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
+
               // Password TextField
               TextField(
                 obscureText: true,
                 decoration: InputDecoration(
                   labelText: 'Katalaluan',
-                  prefixIcon: Icon(Icons.lock_outline),
-                  suffixIcon: Icon(Icons.visibility_off),
+                  prefixIcon: const Icon(Icons.lock_outline),
+                  suffixIcon: const Icon(Icons.visibility_off),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
+
               // Forgot password text
               TextButton(
                 onPressed: () {
                   // Add forgot password logic here
                 },
-                child: Text(
+                child: const Text(
                   'Lupa Nama Pengguna atau Katalaluan?',
                   style: TextStyle(color: Colors.black54),
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
+
               // Login Button
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Color(0xFF6B2572), // Purple color
+                  backgroundColor: const Color(0xFF6B2572), // Purple color
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  padding: EdgeInsets.symmetric(vertical: 15),
+                  padding: const EdgeInsets.symmetric(vertical: 15),
                 ),
                 onPressed: () {
                   // Navigate to the MosqueSearchScreen when pressed
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => HomePage()),
+                    MaterialPageRoute(builder: (context) => const HomePage()),
                   );
                 },
-                child: Text(
+                child: const Text(
                   'Log Masuk',
                   style: TextStyle(fontSize: 18),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
+
               // Or separator
-              Row(
+              const Row(
                 children: [
                   Expanded(
                     child: Divider(color: Colors.black45),
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    padding: EdgeInsets.symmetric(horizontal: 8.0),
                     child: Text('Atau Log Masuk'),
                   ),
                   Expanded(
@@ -110,16 +119,17 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
+
               // Google Sign In Button
               ElevatedButton.icon(
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.white,
                   shape: RoundedRectangleBorder(
-                    side: BorderSide(color: Colors.black12),
+                    side: const BorderSide(color: Colors.black12),
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  padding: EdgeInsets.symmetric(vertical: 15),
+                  padding: const EdgeInsets.symmetric(vertical: 15),
                 ),
                 icon: Image.asset(
                   'assets/google-symbol.png', // Add Google icon asset here
@@ -129,18 +139,19 @@ class LoginScreen extends StatelessWidget {
                 onPressed: () {
                   // Add Google login logic here
                 },
-                label: Text(
+                label: const Text(
                   'Log Masuk dengan Google',
                   style: TextStyle(color: Colors.black),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
+
               // Register link
               TextButton(
                 onPressed: () {
                   // Add register navigation here
                 },
-                child: Text(
+                child: const Text(
                   'Tiada Akaun? Daftar',
                   style: TextStyle(
                     color: Color(0xFF6B2572), // Purple color
